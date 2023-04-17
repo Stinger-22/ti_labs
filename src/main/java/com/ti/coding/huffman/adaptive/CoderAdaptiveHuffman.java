@@ -23,8 +23,8 @@ public class CoderAdaptiveHuffman {
 
     public void code(String input) {
         char character;
-        writer.print(Integer.toString(input.charAt(0), 2));
-        writer.print(' ');
+        readFirstCharacter(input.charAt(0));
+        print();
         for (int i = 1; i < input.length(); i++) {
             character = input.charAt(i);
 
@@ -56,6 +56,14 @@ public class CoderAdaptiveHuffman {
             print();
         }
         writer.flush();
+    }
+
+    private void readFirstCharacter(char character) {
+        Node addedNode = addNewCharacter(character);
+        increaseOccurrence(addedNode.getParent());
+        seenCharacters.put((int) character, addedNode);
+        writer.print(Integer.toString(character, 2));
+        writer.print(' ');
     }
 
     private int recalculateOccurrences(Node node) {
@@ -231,7 +239,7 @@ public class CoderAdaptiveHuffman {
     }
 
     public void print() {
-        System.out.println(toString(root, new StringBuilder(), true, new StringBuilder()).toString());
+        System.out.println(toString(root, new StringBuilder(), true, new StringBuilder()));
     }
 
     private StringBuilder toString(Node node, StringBuilder prefix, boolean isTail, StringBuilder sb) {

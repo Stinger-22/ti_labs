@@ -23,7 +23,6 @@ public class ThreeMain {
 //        task3();
 //        System.out.println("Task 4:");
 //        task4();
-        System.out.println((int) 'с');
         System.out.println("Task 6:");
         task6();
     }
@@ -74,7 +73,7 @@ public class ThreeMain {
     }
 
     public static void task6() {
-        String string = "катерина білик";
+        String string = "касько";
         CoderAdaptiveHuffman coder = new CoderAdaptiveHuffman();
         coder.code(string);
     }
