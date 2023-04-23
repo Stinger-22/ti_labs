@@ -54,7 +54,8 @@ public class CoderHuffmanBlocks {
             root = mergedNodes;
             nodeSorter.add(mergedNodes);
         }
-
+        BinaryTree tree = new BinaryTree(root);
+        tree.print();
 
         return new BinaryTree(root);
     }

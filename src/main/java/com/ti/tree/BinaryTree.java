@@ -44,7 +44,9 @@ public class BinaryTree {
         if (node.getRight() !=null) {
             toString(node.getRight(), new StringBuilder().append(prefix).append(isTail ? "│   " : "    "), false, sb);
         }
-        sb.append(prefix).append(isTail ? "└── " : "┌── ").append(node.getValue()).append("\n");
+//        sb.append(prefix).append(isTail ? "└── " : "┌── ").append((node.getValue().length() > 3 ? " - " : node.getValue())).append("\n");
+        sb.append(prefix).append(isTail ? "└── " : "┌── ").append((node.getValue().length() != 3 ? " - " : (node.getValue()) + " - " + node.getProbability())).append("\n");
+//        sb.append(prefix).append(isTail ? "└── " : "┌── ").append((node.getValue())).append("\n");
         if (node.getLeft() != null) {
             toString(node.getLeft(), new StringBuilder().append(prefix).append(isTail ? "    " : "│   "), true, sb);
         }
