@@ -12,10 +12,11 @@ public class FourMain {
         Map<Integer, String> integerStringMap = Alphabet.getUADictionaryIntegerString();
         Map<String, Integer> stringIntegerMap = Alphabet.getUADictionaryStringInteger();
 
-        LZWCoder coder = new LZWCoder("собольсоболь", stringIntegerMap);
+        String string = "аааббабабаб";
+        LZWCoder coder = new LZWCoder(string, stringIntegerMap);
         List<Integer> data = coder.code();
 
-        System.out.println("String: \"собольсоболь\"");
+        System.out.println("String: \"" + string + "\"");
         System.out.println("Encoded string: " + data);
 
         LZWDecoder decoder = new LZWDecoder(data, integerStringMap);

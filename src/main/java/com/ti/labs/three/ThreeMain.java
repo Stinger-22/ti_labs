@@ -21,10 +21,10 @@ public class ThreeMain {
     public static void main(String[] args) throws IOException {
 //        System.out.println("Task 3:");
 //        task3();
-        System.out.println("Task 4:");
-        task4();
-//        System.out.println("Task 6:");
-//        task6();
+//        System.out.println("Task 4:");
+//        task4();
+        System.out.println("Task 6:");
+        task6();
     }
     public static void task3() {
         List<Map.Entry<Character, Double>> characterProbabilitiesMapping = new ArrayList<>(8);
@@ -73,7 +73,7 @@ public class ThreeMain {
     }
 
     public static void task6() {
-        String string = "собольсоболь";
+        String string = "бойкобойко";
         CoderAdaptiveHuffman coder = new CoderAdaptiveHuffman();
         coder.code(string);
     }
